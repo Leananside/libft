@@ -1,10 +1,16 @@
 *This project has been created as part of the 42 cullicum by tverschu.*
 
-###DESCRIPTION###
+###DESCRIPTION
 
-###INSTRUCTIOSNS###
+| Function name | Description | Input | Expected Output |
+|:--|---|---|--:|
+|ft_atoi| Converts ASCII to Integer | s\* = "-621" | nb = -621 |
 
-###RESOURCES###
+###INSTRUCTIONS
+
+###RESOURCES
+
+All functions with MAN.
 
 How to make a Makefile:
 https://dev.to/ashcript/comprendre-le-makefile-exemple-avec-le-langage-c-47n9
@@ -18,3 +24,6 @@ https://www.geeksforgeeks.org/c/unsigned-char-in-c-with-examples/
 
 Discovery of SIZE_MAX:
 https://stackoverflow.com/questions/22514803/maximum-size-of-size-t
+
+You need to add:
+ft_strtok.c

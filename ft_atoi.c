@@ -6,7 +6,7 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 16:07:48 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/10 03:01:13 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 18:13:17 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,13 @@ int	ft_atoi(const char *nptr)
 	number = 0;
 	while (ft_isspace(nptr[i]))
 		i++;
-	if (nptr[i] == '-' || nptr[i] == '+')
+	if (nptr[i] == '-')
 	{
 		sign = -1;
 		i++;
 	}
+	else if (nptr[i] == '+')
+		i++;
 	while (ft_isdigit(nptr[i]))
 	{
 		number = (number * 10) + nptr[i] - '0';

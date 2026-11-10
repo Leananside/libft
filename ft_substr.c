@@ -6,7 +6,7 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 17:40:36 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/10 02:59:55 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 14:59:45 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*newstr;
-	unsigned long		s_len;
+	unsigned long	s_len;
+	char			*newstr;
 
 	s_len = ft_strlen(s);
 	if (start + len > s_len)

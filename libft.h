@@ -6,22 +6,20 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 00:24:19 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/10 03:22:42 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/10 18:20:15 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <aio.h>
+#include <unistd.h>
 
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
-#endif
 
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
@@ -66,3 +64,5 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	**ft_split(char const *s, char c);
+
+#endif
