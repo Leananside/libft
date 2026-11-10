@@ -5,6 +5,7 @@
 | Function name | Description | Input | Expected Output |
 |:--|---|---|--:|
 |ft_atoi| Converts ASCII to Integer | s\* = "-621" | nb = -621 |
+|ft_bzero| Writes '\0' from set pointer | "123456", n = 2 | "12\0\0\0\0" |
 
 ###INSTRUCTIONS
 
@@ -24,6 +25,9 @@ https://www.geeksforgeeks.org/c/unsigned-char-in-c-with-examples/
 
 Discovery of SIZE_MAX:
 https://stackoverflow.com/questions/22514803/maximum-size-of-size-t
+
+How to make Tables on Markdown:
+https://www.codecademy.com/resources/docs/markdown/tables
 
 You need to add:
 ft_strtok.c
