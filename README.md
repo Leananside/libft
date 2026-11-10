@@ -23,7 +23,30 @@
 |ft_lstnew| Creates new list |  | o- |
 |ft_lstsize| Returns size of chained list| o-o-o-o | 4 |
 |ft_memchr| Searches memory for a char | \*s = "abcde", 'd' | s + 4 |
-|ft_memcmp| Compares two memories for difference | \*s1 = "a1b2" \*s2 = "a1b3" | -1 |
+|ft_memcmp| Compares two memories content | \*s1 = "a12" \*s2 = "a15" | -3 |
+|ft_memcpy| Copies memory to new one | \*s1 = "Woof" | \*s2 = "Woof" |
+|ft_memmove| Moves memory somewhere else | \*s1 = 5\]\[8 | \*s1 = 2\]\[5 |
+|ft_memset| Fills memory with a byte | \*s1 = "---", 'a' | \*s1 = "aaa" |
+|ft_putchar_fd| Writes char to file descriptor | "c", 2 | "c" Error output |
+|ft_putendl_fd| Writes then jumps line | \*s = "Woof", 1 | "Woof\n" Stdout |
+|ft_putnbr_fd| Writes number to file descriptor | "-25", 2 | "-25" Error output |
+|ft_putstr_fd| Writes string to file descriptor | "Woof" | "Woof" Error output |
+|ft_split| Splits a string with given sep | "I am new" | "I" "am" "new"|
+|ft_strchr| Searches string for a char | \*s = "efgh", 'g' | s + 3 |
+|ft_strdup| Duplicates string to new memory | \*s1 = "Ouch" | \*s2 = "Ouch" |
+|ft_striteri| Iterates function through string | \*s1 = "bla", ft_toupper | \*s1 = "BLA" |
+|ft_strjoin| Joins words to single string | "It" "is" "hot" | "It is hot" |
+|ft_strlcat| Concatenates then gives total size | \*s1 = "All", \*s2 = "Stars" | \*s1 = "AllStars", 8 |
+|ft_strlcpy| Copies up to length size | \*s1 = "Weirdo", 5 | \*s2 = "Weird", 5 |
+|ft_strlen| Returns length of string | \*s1 = "Hello" | 5 |
+|ft_strmapi| Creates modified string from function | \*s1 = "HELLO", ft_tolower | \*s2 = "hello" |
+|ft_strncmp| Compares strings up until n | \*s1 = "hell", \*s2 = "help", 3 | 0 |
+|ft_strnstr| Finds string in bigger string | Littlebig, big | 7 |
+|ft_strrchr| Searches char in string from end | \*s = "zyxw", 'x' | s + 3 |
+|ft_strtrim| Trims a string with given set | "AAAscaryAAA", "A" | "scary" |
+|ft_substr| Returns substring from string | "Quick Fox", 7 | "Fox" |
+|ft_tolower| Returns lowercase letters | "TOLOWER" | "tolower" |
+|ft_toupper| Returns uppercase letters | "toupper | "TOUPPER" |
 ||||
 |**Extra functions** | **Description** | **Input** | **Expected Output** |
 |ft_isspace| Is "c" a Whitespace | c = '\n', c = '#' | 1, 0 |
