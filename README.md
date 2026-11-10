@@ -1,6 +1,6 @@
 *This project has been created as part of the 42 cullicum by tverschu.*
 
-###DESCRIPTION
+### DESCRIPTION
 
 | Function name | Description | Input | Expected Output |
 |:--|:--|:-:|:-:|
@@ -51,11 +51,14 @@
 |**Extra functions** | **Description** | **Input** | **Expected Output** |
 |ft_isspace| Is "c" a Whitespace | c = '\n', c = '#' | 1, 0 |
 
-###INSTRUCTIONS
+### INSTRUCTIONS
 
-###RESOURCES
+### RESSOURCES
 
-All functions with MAN.
+First and foremost, the MAN.
+
+How to write and effective README file:
+https://dev.to/kfir-g/how-to-write-an-effective-readme-file-a-guide-for-software-engineers-207b
 
 How to make a Makefile:
 https://dev.to/ashcript/comprendre-le-makefile-exemple-avec-le-langage-c-47n9
@@ -73,5 +76,14 @@ https://stackoverflow.com/questions/22514803/maximum-size-of-size-t
 How to make Tables on Markdown:
 https://www.codecademy.com/resources/docs/markdown/tables
 
+Big thanks to other 42 Lyon students who taught me how to successfully code my Libft:
+- Tristan Gascoin (trgascoi)
+- Hugo Darrieu (hdarrieu)
+- Pablo Belissant (pabellis)
+- Lenny Sauvage (lensauva)
+- And many peers from the 2026's August Piscine.
+
+
+Before pushing, here is what I want to do:
 You need to add:
 ft_strtok.c
