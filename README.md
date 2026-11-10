@@ -6,6 +6,14 @@
 |:--|---|---|--:|
 |ft_atoi| Converts ASCII to Integer | s\* = "-621" | nb = -621 |
 |ft_bzero| Writes '\0' from set pointer | "123456", n = 2 | "12\0\0\0\0" |
+|ft_calloc| Malloc to n bytes sizes | nmemb = 3, size = int | 3\*4 pointer |
+|ft_isalnum| Is "c" alphanumeric | c = 'a', c = ':' | 1, 0 |
+|ft_isalpha| Is "c" alphabetical | c = 'b', c = '2' | 1, 0 |
+|ft_isascii| Is "c" in ASCII table | c = 124, c = 254 | 1, 0 |
+|ft_isdigit| Is "c" a digit number | c = 'c', c = '6' | 0, 1 |
+|ft_isprint| Is "c" a printable | c = '\t', c = ';' | 0, 1 |
+|---|
+|Extra functions | Description | Input | Expected Output |
 
 ###INSTRUCTIONS
 
