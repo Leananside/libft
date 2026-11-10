@@ -4,7 +4,7 @@
 
 | Function name | Description | Input | Expected Output |
 |:--|:--|:-:|:-:|
-|ft_atoi| Converts ASCII to Integer | s\* = "-621" | nb = -621 |
+|ft_atoi| Converts ASCII to Integer | \*s = "-621" | nb = -621 |
 |ft_bzero| Writes '\0' from set pointer | "123456", n = 2 | "12\0\0\0\0" |
 |ft_calloc| Malloc to n bytes sizes | nmemb = 3, size = int | 3\*4 pointer |
 |ft_isalnum| Is "c" alphanumeric | c = 'a', c = ':' | 1, 0 |
@@ -12,7 +12,7 @@
 |ft_isascii| Is "c" in ASCII table | c = 124, c = 254 | 1, 0 |
 |ft_isdigit| Is "c" a digit number | c = 'c', c = '6' | 0, 1 |
 |ft_isprint| Is "c" a printable | c = '\t', c = ';' | 0, 1 |
-|ft_itoa| Converts Integer to ASCII | nb = -1738 | s\* = "-1738" |
+|ft_itoa| Converts Integer to ASCII | nb = -1738 | \*s = "-1738" |
 |ft_lstadd_back| Adds chained list at end | o-o-o | o-o-o-**o** |
 |ft_lstadd_front| Adds chained list at beginning | o-o-o | **o**-o-o-o |
 |ft_lstclear| Clears chained list contents | o-o-o | x-x-x |
@@ -22,9 +22,10 @@
 |ft_lstmap| Creates new list from function | o-o-o-o | o-c-p-c |
 |ft_lstnew| Creates new list |  | o- |
 |ft_lstsize| Returns size of chained list| o-o-o-o | 4 |
-|ft_memchr| Searches memory for a char | s\* = "abcde", 'd' | s + 4 |
+|ft_memchr| Searches memory for a char | \*s = "abcde", 'd' | s + 4 |
+|ft_memcmp| Compares two memories for difference | \*s1 = "a1b2" \*s2 = "a1b3" | -1 |
 ||||
-|**Extra functions | Description | Input | Expected Output** |
+|**Extra functions** | **Description** | **Input** | **Expected Output** |
 |ft_isspace| Is "c" a Whitespace | c = '\n', c = '#' | 1, 0 |
 
 ###INSTRUCTIONS
