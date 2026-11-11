@@ -30,7 +30,7 @@
 |ft_putchar_fd| Writes char to file descriptor | "c", 2 | "c" Error output |
 |ft_putendl_fd| Writes then jumps line | \*s = "Woof", 1 | "Woof\n" Stdout |
 |ft_putnbr_fd| Writes number to file descriptor | "-25", 2 | "-25" Error output |
-|ft_putstr_fd| Writes string to file descriptor | "Woof" | "Woof" Error output |
+|ft_putstr_fd| Writes string to file descriptor | "Woof", 2 | "Woof" Error output |
 |ft_split| Splits a string with given sep | "I am new" | "I" "am" "new"|
 |ft_strchr| Searches string for a char | \*s = "efgh", 'g' | s + 3 |
 |ft_strdup| Duplicates string to new memory | \*s1 = "Ouch" | \*s2 = "Ouch" |
@@ -81,7 +81,8 @@ Big thanks to other 42 Lyon students who taught me how to successfully code my L
 - Hugo Darrieu (hdarrieu)
 - Pablo Belissant (pabellis)
 - Lenny Sauvage (lensauva)
-- And many peers from the 2026's August Piscine.
+- Zakhian Sonie (zsonie) for your time with my ft_strncmp.
+- And many peers from the 2026's August Piscine for their peer-reviews.
 
 
 Before pushing, here is what I want to do:

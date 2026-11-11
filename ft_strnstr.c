@@ -6,29 +6,26 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 15:47:05 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/10 03:13:47 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/11 01:57:24 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	size_t	j;
 
 	i = 0;
 	if (*little == '\0')
 		return ((char *)big);
 	while (big[i])
 	{
-		j = 0;
-		while (big[i + j] == little[j] && j < len)
+		if (ft_strncmp(big, little, len))
 		{
-			if (j - 1 == len)
-				return ((char *)big + i);
-			j++;
+			return ((char *)big + i);
 		}
 		i++;
 	}
