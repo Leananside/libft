@@ -6,7 +6,7 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 16:48:22 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/10 03:06:20 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/11 20:09:23 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ char	*ft_strdup(const char *s)
 	newstr = malloc(sizeof(char) * s_len + 1);
 	if (newstr == NULL)
 		return (NULL);
-	ft_strlcpy(newstr, s, s_len);
+	ft_strlcpy(newstr, s, s_len + 1);
 	return (newstr);
 }

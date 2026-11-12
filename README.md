@@ -5,7 +5,7 @@
 | Function name | Description | Input | Expected Output |
 |:--|:--|:-:|:-:|
 |ft_atoi| Converts ASCII to Integer | \*s = "-621" | nb = -621 |
-|ft_bzero| Writes '\0' from set pointer | "123456", n = 2 | "12\0\0\0\0" |
+|ft_bzero| Writes '\0' from set pointer | "123456", n = 3 | "12\0\0\0\0" |
 |ft_calloc| Malloc to n bytes sizes | nmemb = 3, size = int | 3\*4 pointer |
 |ft_isalnum| Is "c" alphanumeric | c = 'a', c = ':' | 1, 0 |
 |ft_isalpha| Is "c" alphabetical | c = 'b', c = '2' | 1, 0 |
@@ -50,6 +50,7 @@
 ||||
 |**Extra functions** | **Description** | **Input** | **Expected Output** |
 |ft_isspace| Is "c" a Whitespace | c = '\n', c = '#' | 1, 0 |
+|ft_strtok| Extracts tokens from strings | "Look at me" | "Look" "at" "me" |
 
 ### INSTRUCTIONS
 
@@ -62,6 +63,9 @@ https://dev.to/kfir-g/how-to-write-an-effective-readme-file-a-guide-for-software
 
 How to make a Makefile:
 https://dev.to/ashcript/comprendre-le-makefile-exemple-avec-le-langage-c-47n9
+
+Why use AR RCS for libft.a:
+https://stackoverflow.com/questions/29714300/what-does-the-rcs-option-in-ar-do
 
 Discovery of the errno library:
 https://man7.org/linux/man-pages/man3/errno.3.html

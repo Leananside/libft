@@ -6,7 +6,7 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 17:40:36 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/10 14:59:45 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/11 21:57:16 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned long	s_len;
-	char			*newstr;
+	size_t	s_len;
+	char	*newstr;
 
 	s_len = ft_strlen(s);
 	if (start + len > s_len)
@@ -24,6 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	newstr = malloc(sizeof(char) * (len + 1));
 	if (newstr == NULL)
 		return (NULL);
-	ft_memcpy(newstr, s + start, len);
+	ft_memcpy(newstr, (char *)(s + start), len);
+	newstr[len] = '\0';
 	return (newstr);
 }

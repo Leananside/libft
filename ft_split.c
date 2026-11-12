@@ -5,72 +5,85 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/09 18:54:51 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/10 03:01:30 by tverschu         ###   ########lyon.fr   */
+/*   Created: 2026/11/11 22:25:25 by tverschu          #+#    #+#             */
+/*   Updated: 2026/11/12 13:16:18 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <unistd.h>
 #include "libft.h"
 
-int	count_words(char const *s, char c)
-{
-	int	i;
-	int	word_count;
-
-	i = 0;
-	word_count = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i])
-	{
-		if (s[i] == c)
-		{
-			word_count++;
-			while (s[i + 1] == c)
-				i++;
-		}
-		i++;
-	}
-	if (s[i - 1] != c)
-		word_count++;
-	return (word_count);
-}
-
-int	word_length(char const *s, char c)
-{
-	int	len;
-
-	len = 0;
-	while (s[len] || s[len] != c)
-		len++;
-	return (len);
-}
+size_t	count_words(char const *s, char c);
+size_t	copy_words(char **words, const char *s, size_t length, size_t pos);
+void	split_while(char **words, const char *s, char c, size_t *pos);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**words;
-	int		i;
-	int		j;
-	int		word_len;
-	int		number_of_words;
+	size_t	pos;
+	size_t	number_of_words;
+
+	pos = 0;
+	number_of_words = count_words(s, c);
+	words = malloc(sizeof(char *) * (number_of_words + 1));
+	if (words == 0)
+		return (NULL);
+	split_while(words, s, c, &pos);
+	words[pos] = NULL;
+	return (words);
+}
+
+size_t	count_words(char const *s, char c)
+{
+	size_t	i;
+	size_t	number_of_words;
 
 	i = 0;
-	j = 0;
-	number_of_words = count_words(s, c);
-	words = malloc(sizeof(char *) * number_of_words);
+	number_of_words = 0;
+	while (s[i] == c && s[i])
+		i++;
 	while (s[i])
 	{
-		if (s[i] != c)
-		{
-			word_len = word_length(s, c);
-			words[j] = malloc(sizeof(char) * word_len + 1);
-			ft_strlcpy(words[j], s + i, word_len + 1);
-			j++;
-			i += word_len;
-		}
-		while (s[i] == c)
+		while (s[i] != c && s[i])
+			i++;
+		while (s[i] == c && s[i])
+			i++;
+		number_of_words++;
+	}
+	return (number_of_words);
+}
+
+size_t	copy_words(char **words, const char *s, size_t length, size_t pos)
+{
+	words[pos] = malloc(sizeof(char) * (length + 1));
+	if (words[pos] == 0)
+		return (-1);
+	ft_strlcpy(words[pos], s, length + 1);
+	pos++;
+	return (length);
+}
+
+void	split_while(char **words, const char *s, char c, size_t *pos)
+{
+	size_t	length;
+	size_t	i;
+
+	i = 0;
+	while (s[i] == c && s[i])
+		i++;
+	while (s[i])
+	{
+		length = 0;
+		while (s[i + length] != c && s[i + length])
+			length++;
+		words[*pos] = malloc(sizeof(char) * (length + 1));
+		if (words[*pos] == 0)
+			return ;
+		ft_strlcpy(words[*pos], s + i, length + 1);
+		(*pos)++;
+		i += length;
+		while (s[i] == c && s[i])
 			i++;
 	}
-	return (words);
 }

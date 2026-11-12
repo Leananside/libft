@@ -43,17 +43,18 @@ SRCS = ft_isdigit.c \
        ft_memchr.c \
        ft_putnbr_fd.c \
        ft_strlcat.c \
-       ft_strtrim.c
+       ft_strtrim.c \
+       ft_strtok.c
 
 OBJECTS = $(SRCS:.c=.o)
 DEPEDENCIES = $(SRCS:.c=.d)
 NAME = libft.a
 
-$(NAME): $(OBJECTS)
-	ar rcs -o $@ $^
-
 %.o: %.c
 	$(CC) $(CFLAGS) -c -MD $< -o $@
+
+$(NAME): $(OBJECTS)
+	ar rcs -o $@ $^
 
 all: $(NAME)
 
