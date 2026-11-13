@@ -13,6 +13,7 @@ Headers tell the compiler what exists; libraries provide the code that actually 
 To picture how Libft is useful for C programs, here is an overview of how and when our computer "reads" and "translates" our .c codes.
 
 |**Steps**|**Name**|**Description**|**Type of file**|
+|---|---|---|---|
 |First step| Source Code | Our functions and headers written in C | Human readable .c + .h |
 |Second step| Prepocessor | Processes #include #define etc | Preprocessed .i |
 |Third step| Compiler | Generates assembly code | Assembly instructions .s |
