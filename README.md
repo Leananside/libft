@@ -5,11 +5,13 @@
 Libft is a personal C library that includes a variety of general purpose functions available for future programs.
 
 **What is a library?**
+
 Its purpose is to contain the compiled implementation of functions declared in headers.
 A header is the interface used by the compiler, while a library is used by the linker/runtime.
 Headers tell the compiler what exists; libraries provide the code that actually does it.
 
 **How does it work?**
+
 To picture how Libft is useful for C programs, here is an overview of how and when our computer "reads" and "translates" our .c codes.
 
 |**Steps**|**Name**|**Description**|**Type of file**|
@@ -24,10 +26,13 @@ To picture how Libft is useful for C programs, here is an overview of how and wh
 In the previous table, our libft.a library, or archive, is the sum of all objects files .o resulting from the compilation of our .c and .h files.
 
 **Which standard does Libft respect?**
+
 All functions included in the libft are working according to the current C Programming Language Standard (C23) ISO/IEC 9899:
+
 https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf
 
 **What does Libft contain?**
+
 Here is an overview in alphabetical order of all the functions and their **simplified** expected input / output behaviors:
 
 | Function name | Description | Input | Expected Output |
