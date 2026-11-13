@@ -1,6 +1,33 @@
-*This project has been created as part of the 42 cullicum by tverschu.*
+*This project has been created as part of the 42 curriculum by tverschu.*
 
 ### DESCRIPTION
+
+Libft is a personal C library that includes a variety of general purpose functions available for future programs.
+
+**What is a library?**
+Its purpose is to contain the compiled implementation of functions declared in headers.
+A header is the interface used by the compiler, while a library is used by the linker/runtime.
+Headers tell the compiler what exists; libraries provide the code that actually does it.
+
+**How does it work?**
+To picture how Libft is useful for C programs, here is an overview of how and when our computer "reads" and "translates" our .c codes.
+
+|**Steps**|**Name**|**Description**|**Type of file**|
+|First step| Source Code | Our functions and headers written in C | Human readable .c + .h |
+|Second step| Prepocessor | Processes #include #define etc | Preprocessed .i |
+|Third step| Compiler | Generates assembly code | Assembly instructions .s |
+|Fourth step| Assembler | Generates machine code | Object file or library .o + .a |
+|Fifth step| Linker | Link all libraries | Executable .out |
+|Sixth step| Loader | Loads everything in memory | Memory RAM |
+
+In the previous table, our libft.a library, or archive, is the sum of all objects files .o resulting from the compilation of our .c and .h files.
+
+**Which standard does Libft respect?**
+All functions included in the libft are working according to the current C Programming Language Standard (C23) ISO/IEC 9899:
+https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf
+
+**What does Libft contain?**
+Here is an overview in alphabetical order of all the functions and their **simplified** expected input / output behaviors:
 
 | Function name | Description | Input | Expected Output |
 |:--|:--|:-:|:-:|
@@ -54,11 +81,29 @@
 
 ### INSTRUCTIONS
 
+Copy/paste the following command line to your terminal:
+```
+git clone "LINK" tverschu-libft | cd tverschu-libft
+```
+
+Once done, you can compile the libft.a library by writing the following command line:
+```
+make
+```
+
+You can now include my libft library in any of your programs with the following include on top of your C projects:
+```
+#include "libft.h"
+```
+
+You can also test all my Libft functions with the following tester available on my other repo:
+https://github.com/Leananside/libft-tester
+
 ### RESSOURCES
 
 First and foremost, the MAN.
 
-How to write and effective README file:
+How to write an effective README file:
 https://dev.to/kfir-g/how-to-write-an-effective-readme-file-a-guide-for-software-engineers-207b
 
 How to make a Makefile:
@@ -66,6 +111,15 @@ https://dev.to/ashcript/comprendre-le-makefile-exemple-avec-le-langage-c-47n9
 
 Why use AR RCS for libft.a:
 https://stackoverflow.com/questions/29714300/what-does-the-rcs-option-in-ar-do
+
+How does a computer generates an executable:
+https://www.baeldung.com/cs/compiler-linker-assembler-loader
+
+How libraries are statically linked against programs:
+https://www.tenouk.com/ModuleW.html
+
+What is the GNU C Library (glibc) and the BSD libc:
+https://www.baeldung.com/linux/gnu-c-library
 
 Discovery of the errno library:
 https://man7.org/linux/man-pages/man3/errno.3.html
@@ -77,8 +131,20 @@ https://www.geeksforgeeks.org/c/unsigned-char-in-c-with-examples/
 Discovery of SIZE_MAX:
 https://stackoverflow.com/questions/22514803/maximum-size-of-size-t
 
+The full understanding of linked list and their importance against arrays: *in java*
+https://www.youtube.com/watch?v=N6dOwBde7-M
+
 How to make Tables on Markdown:
 https://www.codecademy.com/resources/docs/markdown/tables
+
+Understanding non-null pointers for calloc():
+https://stackoverflow.com/questions/60782394/memory-allocation-for-0-elements-with-calloc
+
+The Open Standard for the C programming language:
+https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf
+
+The ANSI colors for Standard Output graphic rendition:
+https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
 
 Big thanks to other 42 Lyon students who taught me how to successfully code my Libft:
 - Tristan Gascoin (trgascoi)
@@ -86,9 +152,4 @@ Big thanks to other 42 Lyon students who taught me how to successfully code my L
 - Pablo Belissant (pabellis)
 - Lenny Sauvage (lensauva)
 - Zakhian Sonie (zsonie) for your time with my ft_strncmp.
-- And many peers from the 2026's August Piscine for their peer-reviews.
-
-
-Before pushing, here is what I want to do:
-You need to add:
-ft_strtok.c
+- And many peers from the 2026's Piscine for their peer-reviews.

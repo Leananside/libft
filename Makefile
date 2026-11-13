@@ -13,8 +13,8 @@ SRCS = ft_isdigit.c \
        ft_split.c \
        ft_strlen.c \
        ft_tolower.c \
+	   ft_isspace.c \
        ft_bzero.c \
-       ft_isspace.c \
        ft_lstlast.c \
        ft_memmove.c \
        ft_strchr.c \
@@ -43,18 +43,17 @@ SRCS = ft_isdigit.c \
        ft_memchr.c \
        ft_putnbr_fd.c \
        ft_strlcat.c \
-       ft_strtrim.c \
-       ft_strtok.c
+       ft_strtrim.c
 
 OBJECTS = $(SRCS:.c=.o)
-DEPEDENCIES = $(SRCS:.c=.d)
+DEPENDENCIES = $(SRCS:.c=.d)
 NAME = libft.a
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -MD $< -o $@
 
 $(NAME): $(OBJECTS)
-	ar rcs -o $@ $^
+	ar rcs $@ $^
 
 all: $(NAME)
 
@@ -62,7 +61,7 @@ all: $(NAME)
 
 clean:
 	rm -f $(OBJECTS)
-	rm -f $(DEPEDENCIES)
+	rm -f $(DEPENDENCIES)
 
 fclean: clean
 	rm -f $(NAME)
