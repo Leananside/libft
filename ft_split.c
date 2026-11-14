@@ -10,13 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
 #include "libft.h"
 
-size_t	count_words(char const *s, char c);
-size_t	copy_words(char **words, const char *s, size_t length, size_t pos);
-void	split_while(char **words, const char *s, char c, size_t *pos);
+static size_t	count_words(char const *s, char c);
+static void	split_while(char **words, const char *s, char c, size_t *pos);
 
 char	**ft_split(char const *s, char c)
 {
@@ -36,7 +33,7 @@ char	**ft_split(char const *s, char c)
 	return (words);
 }
 
-size_t	count_words(char const *s, char c)
+static size_t	count_words(char const *s, char c)
 {
 	size_t	i;
 	size_t	number_of_words;
@@ -56,17 +53,7 @@ size_t	count_words(char const *s, char c)
 	return (number_of_words);
 }
 
-size_t	copy_words(char **words, const char *s, size_t length, size_t pos)
-{
-	words[pos] = malloc(sizeof(char) * (length + 1));
-	if (words[pos] == 0)
-		return (-1);
-	ft_strlcpy(words[pos], s, length + 1);
-	pos++;
-	return (length);
-}
-
-void	split_while(char **words, const char *s, char c, size_t *pos)
+static void	split_while(char **words, const char *s, char c, size_t *pos)
 {
 	size_t	length;
 	size_t	i;

@@ -48,7 +48,7 @@ OBJECTS = $(SRCS:.c=.o)
 DEPENDENCIES = $(SRCS:.c=.d)
 NAME = libft.a
 
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c -MD $< -o $@
 
 $(NAME): $(OBJECTS)
