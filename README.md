@@ -80,10 +80,6 @@ Here is an overview in alphabetical order of all the functions and their **simpl
 |ft_substr| Returns substring from string | "Quick Fox", 7 | "Fox" |
 |ft_tolower| Returns lowercase letters | "TOLOWER" | "tolower" |
 |ft_toupper| Returns uppercase letters | "toupper | "TOUPPER" |
-||||
-|**Extra functions** | **Description** | **Input** | **Expected Output** |
-|ft_isspace| Is "c" a Whitespace | c = '\n', c = '#' | 1, 0 |
-|ft_strtok| Extracts tokens from strings | "Look at me" | "Look" "at" "me" |
 
 ### INSTRUCTIONS
 
@@ -95,6 +91,21 @@ git clone "LINK" tverschu-libft | cd tverschu-libft
 Once done, you can compile the libft.a library by writing the following command line:
 ```
 make
+```
+
+Should you need to get rid of all .o and .d files, you can delete them by running the following command line:
+```
+make clean
+```
+
+If you want to get rid of all .o and .d files as well as the main libft.a, you can run the following command:
+```
+make fclean
+```
+
+In case something goes wrong or you feel the need to redo the whole compiling process, you should run:
+```
+make re
 ```
 
 You can now include my libft library in any of your programs with the following include on top of your C projects:
