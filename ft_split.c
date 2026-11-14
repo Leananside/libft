@@ -13,7 +13,7 @@
 #include "libft.h"
 
 static size_t	count_words(char const *s, char c);
-static void	split_while(char **words, const char *s, char c, size_t *pos);
+static void		split_while(char **words, const char *s, char c, size_t *pos);
 
 char	**ft_split(char const *s, char c)
 {

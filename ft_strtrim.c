@@ -2,7 +2,8 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
-
+/*                                                    +:+ +:+         +:+     */
+/*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 18:18:46 by tverschu          #+#    #+#             */
 /*   Updated: 2026/11/10 04:24:29 by tverschu         ###   ########lyon.fr   */
