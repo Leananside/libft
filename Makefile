@@ -13,7 +13,6 @@ SRCS = ft_isdigit.c \
        ft_split.c \
        ft_strlen.c \
        ft_tolower.c \
-	   ft_isspace.c \
        ft_bzero.c \
        ft_lstlast.c \
        ft_memmove.c \

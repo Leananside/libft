@@ -15,7 +15,7 @@
 
 unsigned int	ft_lstsize(t_list *lst)
 {
-	int	size;
+	unsigned int	size;
 
 	size = 0;
 	while (lst != NULL)

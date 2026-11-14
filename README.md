@@ -27,7 +27,7 @@ In the previous table, our libft.a library, or archive, is the sum of all object
 
 **Which standard does Libft respect?**
 
-All functions included in the libft are working according to the current C Programming Language Standard (C23) ISO/IEC 9899:
+All functions included in the libft are working according to the C Programming Language Standard (C99) ISO/IEC 9899:
 
 https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf
 
@@ -154,8 +154,8 @@ https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
 
 Big thanks to other 42 Lyon students who taught me how to successfully code my Libft:
 - Tristan Gascoin (trgascoi)
-- Hugo Darrieu (hdarrieu)
-- Pablo Belissant (pabellis)
+- Hugo Darrieutort-Garcia (hdarrieu)
+- Pablo Bellissant (pabellis)
 - Lenny Sauvage (lensauva)
 - Zakhian Sonie (zsonie) for your time with my ft_strncmp.
 - And many peers from the 2026's Piscine for their peer-reviews.

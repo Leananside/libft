@@ -12,22 +12,8 @@
 
 #include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>
 
-int	how_long_nb(int n)
-{
-	int	nb_of_char;
-
-	if (n == 0)
-		return (1);
-	nb_of_char = 0;
-	while (n != 0)
-	{
-		n /= 10;
-		nb_of_char++;
-	}
-	return (nb_of_char);
-}
+static int	how_long_nb(int n);
 
 char	*ft_itoa(int n)
 {
@@ -57,9 +43,18 @@ char	*ft_itoa(int n)
 	}
 	return (result);
 }
-/*
-int	main(void)
+
+static int	how_long_nb(int n)
 {
-	#include <stdio.h>
-	printf("%s", ft_itoa(-2147483648));
-}*/
+	int	nb_of_char;
+
+	if (n == 0)
+		return (1);
+	nb_of_char = 0;
+	while (n != 0)
+	{
+		n /= 10;
+		nb_of_char++;
+	}
+	return (nb_of_char);
+}
