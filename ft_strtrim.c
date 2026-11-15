@@ -20,9 +20,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = 0;
 	end = ft_strlen(s1);
-	while (ft_strchr(set, s1[start]) && start < end)
+	while (start < end && ft_strchr(set, s1[start]))
 		start++;
-	while (ft_strchr(set, s1[end - 1]) && end > start)
+	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	trimmed_str = malloc(sizeof(char) * (end - start) + 1);
 	if (trimmed_str == NULL)

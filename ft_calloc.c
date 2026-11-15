@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	mem = 0;
 	if (size == 0 || nmemb == 0)
 	{
-		mem = malloc(1);
+		mem = malloc(0);
 		if (!mem)
 			return (NULL);
 		*(unsigned char *)mem = '\0';
