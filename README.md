@@ -17,7 +17,7 @@ To picture how Libft is useful for C programs, here is an overview of how and wh
 |**Steps**|**Name**|**Description**|**Type of file**|
 |---|---|---|---|
 |First step| Source Code | Our functions and headers written in C | Human readable .c + .h |
-|Second step| Prepocessor | Processes #include #define etc | Preprocessed .i |
+|Second step| Preprocessor | Preprocesses #include #define etc | Preprocessed .i |
 |Third step| Compiler | Generates assembly code | Assembly instructions .s |
 |Fourth step| Assembler | Generates machine code | Object file or library .o + .a |
 |Fifth step| Linker | Link all libraries | Executable .out |
@@ -84,32 +84,21 @@ Here is an overview in alphabetical order of all the functions and their **simpl
 ### INSTRUCTIONS
 
 Copy/paste the following command line to your terminal:
-```
-git clone "LINK" tverschu-libft | cd tverschu-libft
+```bash
+git clone git@github.com:Leananside/libft.git tverschu-libft
+cd tverschu-libft
 ```
 
 Once done, you can compile the libft.a library by writing the following command line:
-```
-make
-```
-
-Should you need to get rid of all .o and .d files, you can delete them by running the following command line:
-```
-make clean
-```
-
-If you want to get rid of all .o and .d files as well as the main libft.a, you can run the following command:
-```
-make fclean
-```
-
-In case something goes wrong or you feel the need to redo the whole compiling process, you should run:
-```
-make re
+```bash
+make            # Compiles everything.
+make clean      # Deletes all .o and .d files.
+make fclean     # Same as clean, also deletes libft.a.
+make re         # fclean then recompiles.
 ```
 
 You can now include my libft library in any of your programs with the following include on top of your C projects:
-```
+```c
 #include "libft.h"
 ```
 
@@ -118,50 +107,38 @@ https://github.com/Leananside/libft-tester
 
 ### RESSOURCES
 
-First and foremost, the MAN.
 
-How to write an effective README file:
-https://dev.to/kfir-g/how-to-write-an-effective-readme-file-a-guide-for-software-engineers-207b
+Here are all the ressources I have been using and learning to make Libft happen:
 
-How to make a Makefile:
-https://dev.to/ashcript/comprendre-le-makefile-exemple-avec-le-langage-c-47n9
+1) First and foremost, the MAN.
 
-Why use AR RCS for libft.a:
-https://stackoverflow.com/questions/29714300/what-does-the-rcs-option-in-ar-do
+2) How to write an effective README file: https://dev.to/kfir-g/how-to-write-an-effective-readme-file-a-guide-for-software-engineers-207b
 
-How does a computer generates an executable:
-https://www.baeldung.com/cs/compiler-linker-assembler-loader
+3) How to make a Makefile: https://dev.to/ashcript/comprendre-le-makefile-exemple-avec-le-langage-c-47n9
 
-How libraries are statically linked against programs:
-https://www.tenouk.com/ModuleW.html
+4) Why use AR RCS for libft.a: https://stackoverflow.com/questions/29714300/what-does-the-rcs-option-in-ar-do
 
-What is the GNU C Library (glibc) and the BSD libc:
-https://www.baeldung.com/linux/gnu-c-library
+5) How does a computer generates an executable: https://www.baeldung.com/cs/compiler-linker-assembler-loader
 
-Discovery of the errno library:
-https://man7.org/linux/man-pages/man3/errno.3.html
-https://www.chromium.org/chromium-os/developer-library/reference/linux-constants/errnos/
+6) How libraries are statically linked against programs: https://www.tenouk.com/ModuleW.html
 
-Discovery of unsigned char:
-https://www.geeksforgeeks.org/c/unsigned-char-in-c-with-examples/
+7) What is the GNU C Library (glibc) and the BSD libc: https://www.baeldung.com/linux/gnu-c-library
 
-Discovery of SIZE_MAX:
-https://stackoverflow.com/questions/22514803/maximum-size-of-size-t
+8) Discovery of the errno library: https://man7.org/linux/man-pages/man3/errno.3.html and https://www.chromium.org/chromium-os/developer-library/reference/linux-constants/errnos/
 
-The full understanding of linked list and their importance against arrays: *in java*
-https://www.youtube.com/watch?v=N6dOwBde7-M
+9) Discovery of unsigned char: https://www.geeksforgeeks.org/c/unsigned-char-in-c-with-examples/
 
-How to make Tables on Markdown:
-https://www.codecademy.com/resources/docs/markdown/tables
+10) Discovery of SIZE_MAX: https://stackoverflow.com/questions/22514803/maximum-size-of-size-t
 
-Understanding non-null pointers for calloc():
-https://stackoverflow.com/questions/60782394/memory-allocation-for-0-elements-with-calloc
+11) The full understanding of linked list and their importance against arrays: *in java* https://www.youtube.com/watch?v=N6dOwBde7-M
 
-The Open Standard for the C programming language:
-https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf
+12) How to make Tables on Markdown: https://www.codecademy.com/resources/docs/markdown/tables
 
-The ANSI colors for Standard Output graphic rendition:
-https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
+13) Understanding non-null pointers for calloc(): https://stackoverflow.com/questions/60782394/memory-allocation-for-0-elements-with-calloc
+
+14) The Open Standard for the C programming language: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf
+
+15) The ANSI colors for Standard Output graphic rendition: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
 
 Big thanks to other 42 Lyon students who taught me how to successfully code my Libft:
 - Tristan Gascoin (trgascoi)
