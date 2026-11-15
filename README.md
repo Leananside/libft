@@ -134,7 +134,7 @@ Here are all the ressources I have been using and learning to make Libft happen:
 
 12) How to make Tables on Markdown: https://www.codecademy.com/resources/docs/markdown/tables
 
-13) Understanding non-null pointers for calloc(): https://stackoverflow.com/questions/60782394/memory-allocation-for-0-elements-with-calloc
+13) Understanding non-null pointers for calloc(): https://stackoverflow.com/questions/60782394/memory-allocation-for-0-elements-with-calloc and https://cmu-sei.github.io/secure-coding-standards/sei-cert-c-coding-standard/recommendations/memory-management-mem/mem04-c/
 
 14) The Open Standard for the C programming language: https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3220.pdf
 

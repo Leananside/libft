@@ -23,6 +23,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		mem = malloc(1);
 		if (!mem)
 			return (NULL);
+		*(unsigned char *)mem = '\0';
 		return (mem);
 	}
 	if (nmemb > SIZE_MAX / size)
