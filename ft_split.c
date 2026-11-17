@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	count_words(char const *s, char c);
 static int		split_while(char **words, const char *s, char c, size_t *pos);

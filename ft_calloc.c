@@ -6,11 +6,12 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 16:26:37 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/12 15:02:24 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/16 11:03:06 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -19,13 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	mem = 0;
 	if (size == 0 || nmemb == 0)
-	{
-		mem = malloc(0);
-		if (!mem)
-			return (NULL);
-		*(unsigned char *)mem = '\0';
-		return (mem);
-	}
+		return (malloc(0));
 	if (nmemb > SIZE_MAX / size)
 		return (NULL);
 	total = size * nmemb;

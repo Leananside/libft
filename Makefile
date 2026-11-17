@@ -67,3 +67,5 @@ fclean: clean
 
 re: fclean
 	make all
+
+-include $(DEPENDENCIES)

@@ -105,10 +105,10 @@ You can now include my libft library in any of your programs with the following 
 You can also test all my Libft functions with the following tester available on my other repo:
 https://github.com/Leananside/libft-tester
 
-### RESSOURCES
+### RESOURCES
 
 
-Here are all the ressources I have been using and learning to make Libft happen:
+Here are all the resources I have been using and learning to make Libft happen:
 
 1) First and foremost, the MAN.
 
