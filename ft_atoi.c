@@ -6,7 +6,7 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 16:07:48 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/16 10:54:03 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/18 22:01:50 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ static int	ft_isspace(int c);
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	number;
+	size_t	i;
+	int		sign;
+	size_t	number;
 
 	i = 0;
 	sign = 1;

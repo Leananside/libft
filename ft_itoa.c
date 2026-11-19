@@ -6,7 +6,7 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 23:16:35 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/12 01:47:27 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/18 22:03:44 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ static int	how_long_nb(int n);
 
 char	*ft_itoa(int n)
 {
-	char	*result;
-	int		i;
+	char		*result;
+	size_t		i;
 
 	i = how_long_nb(n) + (n < 0);
 	result = malloc(sizeof(char) * (i + 1));
@@ -46,7 +46,7 @@ char	*ft_itoa(int n)
 
 static int	how_long_nb(int n)
 {
-	int	nb_of_char;
+	size_t	nb_of_char;
 
 	if (n == 0)
 		return (1);

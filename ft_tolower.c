@@ -6,13 +6,13 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 14:09:27 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/09 14:10:12 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/18 22:03:15 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
+		return (c + ' ');
 	return (c);
 }

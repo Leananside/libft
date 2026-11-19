@@ -6,7 +6,7 @@
 /*   By: tverschu <tverschu@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 18:18:46 by tverschu          #+#    #+#             */
-/*   Updated: 2026/11/10 04:24:29 by tverschu         ###   ########lyon.fr   */
+/*   Updated: 2026/11/18 22:02:14 by tverschu         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*trimmed_str;
-	int		start;
-	int		end;
+	char		*trimmed_str;
+	size_t		start;
+	size_t		end;
 
 	start = 0;
 	end = ft_strlen(s1);
